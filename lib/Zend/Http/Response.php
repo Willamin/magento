@@ -569,7 +569,7 @@ class Zend_Http_Response
 
             // Anything else is an error condition
             #require_once 'Zend/Http/Exception.php';
-            throw new Zend_Http_Exception('Invalid header line detected');
+            throw new Zend_Http_Exception("Invalid header line detected: $index -> $line");
         }
 
         return $headers;
